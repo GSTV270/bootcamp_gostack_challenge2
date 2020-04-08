@@ -28,7 +28,7 @@ function App() {
     const response = await api.post('/repositories', {
       url,
       title,
-      formattedTechs
+      techs: formattedTechs
     })
 
     setRepositories(oldState => ([...oldState, response.data]));
@@ -37,7 +37,7 @@ function App() {
   async function handleRemoveRepository(id) {
     await api.delete(`/repositories/${id}`);
 
-    const newRepositories = repositories.filter(repo => repo.id != id);
+    const newRepositories = repositories.filter(repo => repo.id !== id);
 
     setRepositories(newRepositories);
   }
