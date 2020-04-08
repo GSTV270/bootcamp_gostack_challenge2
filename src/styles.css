@@ -22,6 +22,25 @@ div li + li {
   margin-top: 15px;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form input {
+  font-size: 17px;
+  padding: 2px 2px;
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+
+.form input + input {
+  margin-top: 8px;
+}
+
 button {
   background: #7159c1;
   color: #fff;
@@ -31,9 +50,11 @@ button {
   margin-top: 15px;
   font-weight: bold;
   font-size: 14px;
+  border-radius: 4px;
 }
 
 div li button {
   margin: 0 15px;
   background: #ca4949;
+  border-radius: 4px;
 }
